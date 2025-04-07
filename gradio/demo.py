@@ -11,7 +11,7 @@ model = hub.Module(name='U2Net')
 
 def infer(img):
   result = model.Segmentation(
-      images=[cv2.imread(img.name)],
+      images=[cv2.imread(img)],
       paths=None,
       batch_size=1,
       input_size=320,
@@ -19,10 +19,10 @@ def infer(img):
       visualization=True)
   return result[0]['front'][:,:,::-1], result[0]['mask']
 
-inputs = gr.inputs.Image(type='file', label="Original Image")
+inputs = gr.Image(type='filepath', label="Original Image")
 outputs = [
-           gr.outputs.Image(type="numpy",label="Front"),
-           gr.outputs.Image(type="numpy",label="Mask")
+           gr.Image(type="numpy",label="Front"),
+           gr.Image(type="numpy",label="Mask")
            ]
 
 title = "U^2-Net"
