@@ -79,11 +79,11 @@ def muti_bce_loss_fusion(d0, d1, d2, d3, d4, d5, d6, labels_v):
 model_name = "u2net"
 
 # Paths for dataset and model saving
-data_dir = os.path.join(os.getcwd(), "custom", "dataset_split" + os.sep)  # Dataset folder
-tra_image_dir = os.path.join("train", "images" + os.sep)  # Training images folder
-tra_label_dir = os.path.join("train", "masks" + os.sep)  # Training labels folder
+data_dir = os.path.join(os.getcwd(), "new_train_data" + os.sep)  # Dataset folder
+tra_image_dir = os.path.join("images" + os.sep)  # Training images folder
+tra_label_dir = os.path.join("masks" + os.sep)  # Training labels folder
 
-image_ext = ".png"  # Image file extension
+image_ext = ".jpg"  # Image file extension
 label_ext = ".png"  # Label file extension
 
 model_dir = os.path.join(os.getcwd(), "saved_models", model_name + os.sep)  # Model save folder
