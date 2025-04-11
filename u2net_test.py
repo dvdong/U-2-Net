@@ -58,9 +58,9 @@ def main():
     # --------- 1. get image path and name ---------
     model_name = "u2net"  # u2netp
 
-    image_dir = os.path.join(os.getcwd(), "test_data", "test_images")
+    image_dir = os.path.join(os.getcwd(), "custom", "dataset_split", "test", "images")
     prediction_dir = os.path.join(
-        os.getcwd(), "test_data", model_name + "_results" + os.sep
+        os.getcwd(), "custom", "dataset_split", model_name + "_results" + os.sep
     )
     model_dir = os.path.join(
         os.getcwd(), "saved_models", model_name, model_name + ".pth"
