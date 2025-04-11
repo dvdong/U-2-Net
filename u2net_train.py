@@ -90,7 +90,7 @@ model_dir = os.path.join(os.getcwd(), "saved_models", model_name + os.sep)  # Mo
 
 # Training parameters
 epoch_num = 1000  # Number of training epochs
-batch_size_train = 24  # Batch size for training
+batch_size_train = 12  # Batch size for training
 batch_size_val = 1  # Batch size for validation
 
 train_num = 0
